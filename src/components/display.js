@@ -7,7 +7,11 @@ class Display extends React.Component {
   }
 
   render() {
-    return <p id={this.props.idText}>{this.props.text}</p>;
+    return (
+      <p className="display" id={this.props.idText}>
+        {this.props.text}
+      </p>
+    );
   }
 }
 

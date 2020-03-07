@@ -7,7 +7,11 @@ class Label extends React.Component {
   }
 
   render() {
-    return <p id={this.props.idText}>{this.props.text}</p>;
+    return (
+      <p className="label" id={this.props.idText}>
+        {this.props.text}
+      </p>
+    );
   }
 }
 

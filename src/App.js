@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.scss";
 import ReactFCCtest from "react-fcctest";
 import Break from "./components/break";
 import Session from "./components/session";
@@ -8,9 +8,11 @@ import Timer from "./components/timer";
 function App() {
   return (
     <div id="clock">
-      <Break />
-      <Session />
       <Timer />
+      <div id="session-break-container">
+        <Break />
+        <Session />
+      </div>
       <ReactFCCtest />
     </div>
   );
