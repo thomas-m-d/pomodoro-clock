@@ -1,6 +1,20 @@
+# Pomodoro Clock
+This is a pomodoro clock/timer web app. The intended use is for you to start the timer with
+a set session and break length (in minutes), then work for the session length and relax for
+the break length.
+
+## License
+Note that this web app is being licensed under the GNU GPLv3. See `LICENSE` for full
+license text.
+
+## FreeCodeCamp Info
+This web app was developed for FreeCodeCamp's [Pomodoro Clock](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-pomodoro-clock) project. This app passes all of
+FreeCodeCamp's tests for this project.
+
+## CreateReactApp
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 

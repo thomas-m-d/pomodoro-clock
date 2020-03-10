@@ -1,5 +1,6 @@
 import { createStore } from "redux";
 import reducer from "./reducer";
+import * as TextResources from "./resources/textResources";
 
 export const initialState = {
   sessionLength: 25,
@@ -9,7 +10,8 @@ export const initialState = {
   accurateInterval: "",
   isTimerRunning: false,
   shouldBeepPlay: false,
-  isSessionTimerActive: true
+  isSessionTimerActive: true,
+  startStopText: TextResources.startButton
 };
 
 const Store = createStore(reducer);

@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/App.scss";
-import ReactFCCtest from "react-fcctest";
 import Break from "./components/break";
 import Session from "./components/session";
 import Timer from "./components/timer";
@@ -13,7 +12,6 @@ function App() {
         <Break />
         <Session />
       </div>
-      <ReactFCCtest />
     </div>
   );
 }

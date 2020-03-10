@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as Actions from "../actionNames";
+import * as Actions from "../resources/actionNames";
 
 class StartStop extends React.Component {
   constructor(props) {
@@ -9,14 +9,20 @@ class StartStop extends React.Component {
 
   render() {
     return (
-      <button id={this.props.idText} onClick={this.props.startStopFunc}>
-        S
+      <button
+        id={this.props.idText}
+        className="timer-button"
+        onClick={this.props.startStopFunc}
+      >
+        {this.props.text}
       </button>
     );
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  text: state.startStopText
+});
 const mapDispatchToProps = (dispatch, ownProps) => ({
   startStopFunc: () =>
     dispatch({

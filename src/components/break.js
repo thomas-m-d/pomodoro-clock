@@ -4,7 +4,7 @@ import Label from "./label.js";
 import Display from "./display.js";
 import Increment from "./increment.js";
 import Decrement from "./decrement.js";
-import * as Actions from "../actionNames";
+import * as Blocks from "../resources/blockNames";
 
 class Break extends React.Component {
   constructor(props) {
@@ -14,16 +14,20 @@ class Break extends React.Component {
   render() {
     return (
       <div className="break main-block">
-        <Label idText="break-label" text="Break Length" />
-        <Display idText="break-length" stateValueToTrack="breakLength" />
-        <Decrement
-          idText="break-decrement"
-          valueToDecrement={Actions.breakBlock}
-        />
-        <Increment
-          idText="break-increment"
-          valueToIncrement={Actions.breakBlock}
-        />
+        <div className="break-horizontal-div">
+          <Decrement
+            idText="break-decrement"
+            valueToDecrement={Blocks.breakBlock}
+          />
+          <div className="break-vertical-div">
+            <Label idText="break-label" text="Break Length" />
+            <Display idText="break-length" stateValueToTrack="breakLength" />
+          </div>
+          <Increment
+            idText="break-increment"
+            valueToIncrement={Blocks.breakBlock}
+          />
+        </div>
       </div>
     );
   }

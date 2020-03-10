@@ -1,22 +1,22 @@
-import * as Actions from "../actionNames";
+import * as Blocks from "./blockNames";
 import formatMinSec from "./formatMinSec";
 
 export function isBreakAndGreaterThanOne(state, action) {
-  return action.valueToDecrement == Actions.breakBlock && state.breakLength > 1;
+  return action.valueToDecrement == Blocks.breakBlock && state.breakLength > 1;
 }
 
 export function isSessionAndGreaterThanOne(state, action) {
   return (
-    action.valueToDecrement == Actions.sessionBlock && state.sessionLength > 1
+    action.valueToDecrement == Blocks.sessionBlock && state.sessionLength > 1
   );
 }
 
 export function isTimeLeftAndGreaterThanZero(state, action) {
-  return action.valueToDecrement == Actions.timeLeft && state.currentTime > 0;
+  return action.valueToDecrement == Blocks.timeLeft && state.currentTime > 0;
 }
 
 export function isTimeLeftAndEqualToZero(state, action) {
-  return action.valueToDecrement == Actions.timeLeft && state.currentTime == 0;
+  return action.valueToDecrement == Blocks.timeLeft && state.currentTime == 0;
 }
 
 export function decrementBreakLength(state) {

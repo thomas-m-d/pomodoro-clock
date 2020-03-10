@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as Actions from "../actionNames";
+import * as Actions from "../resources/actionNames";
 
 class Reset extends React.Component {
   constructor(props) {
@@ -9,8 +9,12 @@ class Reset extends React.Component {
 
   render() {
     return (
-      <button id={this.props.idText} onClick={this.props.reset}>
-        R
+      <button
+        id={this.props.idText}
+        className="timer-button"
+        onClick={this.props.reset}
+      >
+        Reset
       </button>
     );
   }

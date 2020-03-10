@@ -4,7 +4,7 @@ import Label from "./label.js";
 import Display from "./display.js";
 import Increment from "./increment.js";
 import Decrement from "./decrement.js";
-import * as Actions from "../actionNames";
+import * as Blocks from "../resources/blockNames";
 
 class Session extends React.Component {
   constructor(props) {
@@ -14,16 +14,23 @@ class Session extends React.Component {
   render() {
     return (
       <div className="session main-block">
-        <Label idText="session-label" text="Session Length" />
-        <Display idText="session-length" stateValueToTrack="sessionLength" />
-        <Decrement
-          idText="session-decrement"
-          valueToDecrement={Actions.sessionBlock}
-        />
-        <Increment
-          idText="session-increment"
-          valueToIncrement={Actions.sessionBlock}
-        />
+        <div className="session-horizontal-div">
+          <Decrement
+            idText="session-decrement"
+            valueToDecrement={Blocks.sessionBlock}
+          />
+          <div className="session-vertical-div">
+            <Label idText="session-label" text="Session Length" />
+            <Display
+              idText="session-length"
+              stateValueToTrack="sessionLength"
+            />
+          </div>
+          <Increment
+            idText="session-increment"
+            valueToIncrement={Blocks.sessionBlock}
+          />
+        </div>
       </div>
     );
   }

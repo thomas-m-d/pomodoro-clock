@@ -1,15 +1,13 @@
-import * as Actions from "../actionNames";
+import * as Blocks from "./blockNames";
 import formatMinSec from "./formatMinSec";
 
 export function isBreakAndLessThanSixty(state, action) {
-  return (
-    action.valueToIncrement == Actions.breakBlock && state.breakLength < 60
-  );
+  return action.valueToIncrement == Blocks.breakBlock && state.breakLength < 60;
 }
 
 export function isSessionandLessThanSixty(state, action) {
   return (
-    action.valueToIncrement == Actions.sessionBlock && state.sessionLength < 60
+    action.valueToIncrement == Blocks.sessionBlock && state.sessionLength < 60
   );
 }
 

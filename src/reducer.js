@@ -1,5 +1,5 @@
 import { initialState } from "./store.js";
-import * as Actions from "./actionNames";
+import * as Actions from "./resources/actionNames";
 import * as DecrementFunctions from "./resources/decrementFunctions.js";
 import * as IncrementFunctions from "./resources/incrementFunctions";
 import * as ResetFunctions from "./resources/resetFunctions";

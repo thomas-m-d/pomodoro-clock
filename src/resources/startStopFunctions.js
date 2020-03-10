@@ -1,6 +1,8 @@
 import Store from "../store";
 import accurateInterval from "accurate-interval";
-import * as Actions from "../actionNames";
+import * as Actions from "./actionNames";
+import * as TextResources from "./textResources";
+import * as Blocks from "./blockNames";
 import formatMinSec from "./formatMinSec";
 
 export function stopIntervalTimer(state) {
@@ -9,7 +11,8 @@ export function stopIntervalTimer(state) {
   let newState = {
     ...state,
     timeToDisplay: formatMinSec(state.currentTime),
-    isTimerRunning: false
+    isTimerRunning: false,
+    startStopText: TextResources.startButton
   };
 
   return newState;
@@ -19,14 +22,15 @@ export function setupIntervalTimer(state) {
   let interval = accurateInterval(scheduledTime => {
     Store.dispatch({
       type: Actions.DECREMENT,
-      valueToDecrement: Actions.timeLeft
+      valueToDecrement: Blocks.timeLeft
     });
   }, 1000);
 
   let newState = {
     ...state,
     accurateInterval: interval,
-    isTimerRunning: true
+    isTimerRunning: true,
+    startStopText: TextResources.stopButton
   };
 
   return newState;

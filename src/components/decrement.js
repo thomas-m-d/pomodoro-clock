@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as Actions from "../actionNames.js";
+import * as Actions from "../resources/actionNames.js";
 
 class Decrement extends React.Component {
   constructor(props) {
@@ -9,7 +9,11 @@ class Decrement extends React.Component {
 
   render() {
     return (
-      <button id={this.props.idText} onClick={this.props.decrement}>
+      <button
+        id={this.props.idText}
+        className="decrement-button inc-dec-button"
+        onClick={this.props.decrement}
+      >
         -
       </button>
     );
